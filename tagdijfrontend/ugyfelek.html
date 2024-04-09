@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Befizetés karbantartás</title>
-    <script src="befizetes.js"></script>
+    <title>Ügyfelek karbantartás</title>
+    <script src="ugyfelek.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -15,7 +15,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -28,25 +27,35 @@
         </div>
     </nav>
     <div class="container">
-      <h1>Befizetések nyilvántartása</h1>
-      <form action="#" method="post" class="row" id="befizeteseknyilvantartasa">
+      <h1>Ügyfelek nyilvántartása</h1>
+      <form action="#" method="post" class="row" id="ugyfeleknyilvantartasa">
           <fieldset>
               <legend>
-                  Aktuális felhasználó befizetései
+                  Aktuális Ügyfél 
                   <div class="row">
                       <div class="mb-3 col-4">
                           <label for="azon" class="form-label">Azonosító: </label>
                           <input type="text" class="form-control" id="azon" name="azon">
                       </div>
                       <div class="mb-3 col-4">
-                          <label for="datum" class="form-label">Dátum: </label>
-                          <input type="text" class="form-control" id="datum", name="datum">
+                          <label for="nev" class="form-label">Név: </label>
+                          <input type="text" class="form-control" id="nev", name="nev">
                       </div>
                       <div class="mb-3 col-4">
-                          <label for="osszeg" class="form-label">Ár: </label>
-                          <input type="text" class="form-control" id="osszeg" name="osszeg">
+                          <label for="szulev" class="form-label">Születési Dátum: </label>
+                          <input type="text" class="form-control" id="szulev" name="szulev">
                       </div>
                   </div>
+                  <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="irszam" class="form-label">Irányítószám: </label>
+                        <input type="text" class="form-control" id="irszam" name="irszam">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="orsz" class="form-label">Ország: </label>
+                        <input type="text" class="form-control" id="orsz", name="orsz">
+                    </div>
+                </div>
               </legend>
           </fieldset>
           <div class="d-flex justify-content-around">
@@ -56,7 +65,7 @@
               <button type="button" class="btn btn-danger" id="delete">Delete</button>
           </div>
       </form>
-      <div id="befizeteslista">
+      <div id="ugyfellista">
 
       </div>
   </div>
